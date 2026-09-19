@@ -1,0 +1,5 @@
+[plugin]
+package = "pretix-promptpay"
+modules = [ "pretix_promptpay" ]
+marketplace_name = "promptpay"
+

@@ -1,0 +1,31 @@
+{% load i18n %}
+<p><strong>{% trans "PromptPay Verification" %}</strong></p>
+
+{% if slip_path %}
+    <div class="thumbnail" style="max-width: 350px; margin-bottom: 15px;">
+        <img src="{{ slip_path }}" alt="Customer Slip Preview" />
+    </div>
+    
+    <p>
+        <a href="{{ slip_path }}" target="_blank" class="btn btn-default btn-sm">
+            <span class="fa fa-external-link"></span> {% trans "Open full-size slip image" %}
+        </a>
+    </p>
+
+    {% if payment.state == "pending" %}
+        <form action="" method="post" style="margin-top: 15px;">
+            {% csrf_token %}
+            <input type="hidden" name="payment_action" value="promptpay_approve">
+            <button type="submit" class="btn btn-success">
+                <span class="fa fa-check"></span> {% trans "Approve Slip & Mark as Paid" %}
+            </button>
+        </form>
+    {% elif payment.state == "confirmed" %}
+        <div class="alert alert-success" style="margin-top: 10px; display: inline-block;">
+            <span class="fa fa-check-circle"></span> {% trans "This slip has been approved and order is confirmed." %}
+        </div>
+    {% endif %}
+{% else %}
+    <p class="text-muted">⚠️ {% trans "No payment slip has been uploaded by the customer yet." %}</p>
+{% endif %}
+

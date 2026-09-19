@@ -1,0 +1,228 @@
+# Thai translations for pretix-promptpay.
+# Copyright (C) 2026 the pretix-promptpay authors
+# This file is distributed under the same license as the pretix-promptpay package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pretix-promptpay\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-19 01:40+0000\n"
+"PO-Revision-Date: 2026-09-19 08:40+0700\n"
+"Last-Translator: \n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: pretix_promptpay/apps.py:17
+msgid "Prompt Pay"
+msgstr "พร้อมเพย์"
+
+#: pretix_promptpay/apps.py:19
+msgid "Thai Prompytpay QR Payments"
+msgstr "ชำระเงินผ่านพร้อมเพย์ด้วยคิวอาร์โค้ด"
+
+#: pretix_promptpay/logentrytypes.py:10
+#, python-brace-format
+msgid ""
+"PromptPay bank transfer slip uploaded. <a href='{url}' target='_blank'>View "
+"File</a>"
+msgstr ""
+"อัปโหลดสลิปโอนเงินพร้อมเพย์แล้ว <a href='{url}' target='_blank'>"
+"ดูไฟล์</a>"
+
+#: pretix_promptpay/logentrytypes.py:18
+msgid "Organizer staff"
+msgstr "เจ้าหน้าที่ผู้จัดงาน"
+
+#: pretix_promptpay/logentrytypes.py:19
+#, python-brace-format
+msgid "PromptPay transfer verified and payment approved by {user}."
+msgstr "ตรวจสอบการโอนพร้อมเพย์แล้ว และอนุมัติการชำระเงินโดย {user}"
+
+#: pretix_promptpay/payment.py:16
+msgid "Upload Payment Slip"
+msgstr "อัปโหลดสลิปการชำระเงิน"
+
+#: pretix_promptpay/payment.py:17
+msgid ""
+"Please upload a screenshot or image of your successful PromptPay transfer "
+"receipt."
+msgstr ""
+"กรุณาอัปโหลดภาพหน้าจอหรือรูปภาพสลิปการโอนเงินพร้อมเพย์ที่สำเร็จแล้ว"
+
+#: pretix_promptpay/payment.py:26 pretix_promptpay/views.py:35
+msgid "Only JPG, JPEG, or PNG images are accepted."
+msgstr "รับเฉพาะไฟล์รูปภาพ JPG, JPEG หรือ PNG เท่านั้น"
+
+#: pretix_promptpay/payment.py:31
+msgid "PromptPay / QR Code"
+msgstr "พร้อมเพย์ / คิวอาร์โค้ด"
+
+#: pretix_promptpay/payment.py:32
+msgid "PromptPay"
+msgstr "พร้อมเพย์"
+
+#: pretix_promptpay/payment.py:42
+msgid "PromptPay ID / Account"
+msgstr "หมายเลขพร้อมเพย์ / บัญชี"
+
+#: pretix_promptpay/payment.py:44
+msgid ""
+"Enter your 10-digit mobile number (e.g., 0812345678) or your 13-digit "
+"Corporate/Tax ID linked to your PromptPay account."
+msgstr ""
+"กรอกหมายเลขโทรศัพท์มือถือ 10 หลัก (เช่น 0812345678) "
+"หรือเลขประจำตัวผู้เสียภาษี/นิติบุคคล 13 หลักที่ผูกกับบัญชีพร้อมเพย์ของคุณ"
+
+#: pretix_promptpay/signals.py:27
+msgid "PromptPay Slips"
+msgstr "สลิปพร้อมเพย์"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:5
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:8
+msgid "Bulk PromptPay Review"
+msgstr "ตรวจสอบสลิปพร้อมเพย์แบบกลุ่ม"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:9
+msgid ""
+"Review all pending manual bank transfers. Compare the slip screenshots to "
+"your bank statement before approving."
+msgstr ""
+"ตรวจสอบรายการโอนเงินที่รอการยืนยันทั้งหมด "
+"เปรียบเทียบภาพสลิปกับรายการเดินบัญชีก่อนอนุมัติ"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:14
+msgid "All caught up!"
+msgstr "เรียบร้อยแล้ว!"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:15
+msgid "There are no pending PromptPay slips awaiting review right now."
+msgstr "ขณะนี้ไม่มีสลิปพร้อมเพย์ที่รอการตรวจสอบ"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:24
+msgid "Reject Selected Slips"
+msgstr "ปฏิเสธสลิปที่เลือก"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:27
+msgid "Approve & Confirm Selected Orders"
+msgstr "อนุมัติและยืนยันคำสั่งซื้อที่เลือก"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:36
+msgid "Order Code"
+msgstr "รหัสคำสั่งซื้อ"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:37
+msgid "Total Amount"
+msgstr "ยอดรวม"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:38
+msgid "Date Created"
+msgstr "วันที่สร้าง"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:39
+msgid "Uploaded Transfer Slip Receipt"
+msgstr "สลิปการโอนที่อัปโหลด"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:60
+msgid "Open Full Screen"
+msgstr "เปิดเต็มจอ"
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:62
+msgid "No file found"
+msgstr "ไม่พบไฟล์"
+
+#: pretix_promptpay/templates/pretix_promptpay/checkout_confirm.html:3
+msgid ""
+"You will be presented with a dynamic PromptPay QR code to complete your "
+"payment on the next screen."
+msgstr ""
+"ในหน้าถัดไป คุณจะเห็นคิวอาร์โค้ดพร้อมเพย์สำหรับชำระเงิน"
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:2
+msgid "PromptPay Verification"
+msgstr "ตรวจสอบพร้อมเพย์"
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:11
+msgid "Open full-size slip image"
+msgstr "เปิดภาพสลิปขนาดเต็ม"
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:20
+msgid "Approve Slip & Mark as Paid"
+msgstr "อนุมัติสลิปและทำเครื่องหมายว่าชำระแล้ว"
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:25
+msgid "This slip has been approved and order is confirmed."
+msgstr "สลิปนี้ได้รับการอนุมัติแล้ว และคำสั่งซื้อได้รับการยืนยันแล้ว"
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:29
+msgid "No payment slip has been uploaded by the customer yet."
+msgstr "ลูกค้ายังไม่ได้อัปโหลดสลิปการชำระเงิน"
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:8
+msgid "Scan to Pay via PromptPay"
+msgstr "สแกนเพื่อชำระผ่านพร้อมเพย์"
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:14
+msgid "Upload your Transfer Slip"
+msgstr "อัปโหลดสลิปการโอนเงิน"
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:16
+msgid ""
+"Please open your banking application, complete the payment by scanning the "
+"QR code, and upload the transfer receipt below to secure your registration."
+msgstr ""
+"กรุณาเปิดแอปธนาคาร ชำระเงินโดยสแกนคิวอาร์โค้ด "
+"แล้วอัปโหลดสลิปการโอนด้านล่างเพื่อยืนยันการลงทะเบียนของคุณ"
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:21
+msgid ""
+"Slip uploaded successfully! The event organizer is reviewing your "
+"transaction."
+msgstr ""
+"อัปโหลดสลิปสำเร็จแล้ว! ผู้จัดงานกำลังตรวจสอบรายการของคุณ"
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:25
+msgid "View uploaded slip"
+msgstr "ดูสลิปที่อัปโหลด"
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:37
+msgid "Submit Transfer Slip"
+msgstr "ส่งสลิปการโอนเงิน"
+
+#: pretix_promptpay/views.py:24
+msgid "No active pending PromptPay transaction found for this order."
+msgstr "ไม่พบรายการพร้อมเพย์ที่รอชำระสำหรับคำสั่งซื้อนี้"
+
+#: pretix_promptpay/views.py:28
+msgid "No file was uploaded."
+msgstr "ไม่ได้มีการอัปโหลดไฟล์"
+
+#: pretix_promptpay/views.py:61
+msgid "Your bank transfer slip was uploaded successfully!"
+msgstr "อัปโหลดสลิปการโอนเงินสำเร็จแล้ว!"
+
+#: pretix_promptpay/views.py:80
+msgid "You do not have permission to view this page."
+msgstr "คุณไม่มีสิทธิ์ดูหน้านี้"
+
+#: pretix_promptpay/views.py:100
+msgid "No payments were selected."
+msgstr "ไม่ได้เลือกรายการชำระเงิน"
+
+#: pretix_promptpay/views.py:123
+#, python-brace-format
+msgid "Error confirming order {code}: {error}"
+msgstr "เกิดข้อผิดพลาดขณะยืนยันคำสั่งซื้อ {code}: {error}"
+
+#: pretix_promptpay/views.py:126
+#, python-brace-format
+msgid "Successfully approved and confirmed {count} order(s)."
+msgstr "อนุมัติและยืนยันคำสั่งซื้อ {count} รายการสำเร็จแล้ว"
+
+#: pretix_promptpay/views.py:140
+#, python-brace-format
+msgid "Rejected {count} slip(s). Customers can now upload a new receipt."
+msgstr "ปฏิเสธสลิป {count} รายการ ลูกค้าสามารถอัปโหลดสลิปใหม่ได้แล้ว"

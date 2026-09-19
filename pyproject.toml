@@ -1,0 +1,45 @@
+[project]
+name = "pretix-promptpay"
+dynamic = ["version"]
+description = "Thai Prompytpay QR Payments"
+readme = "README.rst"
+license = {text = "Apache"}
+keywords = ["pretix"]
+authors = [
+    {name = "Nate", email = "your-email@example.org"},
+]
+maintainers = [
+    {name = "Nate", email = "your-email@example.org"},
+]
+
+dependencies = [
+    "promptpay>=0.1.5",
+    "qrcode>=7.0",
+    "pillow>=10.0.0",
+]
+
+[project.entry-points."pretix.plugin"]
+pretix_promptpay = "pretix_promptpay:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+homepage = "GitHub repository URL"
+repository = "GitHub repository URL"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretix_promptpay.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretix*"]
+namespaces = false

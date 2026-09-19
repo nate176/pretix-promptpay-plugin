@@ -1,0 +1,47 @@
+{% load i18n %}
+{% load bootstrap3 %}
+{% load money %}
+{% load eventurl %}
+{% load rich_text %}
+
+<div class="row payment-box">
+    <div class="col-xs-12 col-md-6 text-center">
+        <h4>{% trans "Scan to Pay via PromptPay" %}</h4>
+        <img src="{{ qr_code_img }}" alt="PromptPay QR Code" class="img-responsive center-block" style="max-height: 250px;"/>
+        <p class="lead"><strong>{{ amount|money:request.event.currency }}</strong></p>
+        <div class="payment-instructions">
+            <!-- The linebreaks filter helps maintain standard paragraph formatting -->
+            {{ instructions|rich_text }}
+        </div>
+    </div>
+    
+    <div class="col-xs-12 col-md-6">
+        <h4>{% trans "Upload your Transfer Slip" %}</h4>
+        <p class="text-muted">
+            {% trans "Please open your banking application, complete the payment by scanning the QR code, and upload the transfer receipt below to secure your registration." %}
+        </p>
+
+        {% if payment.info_data.slip_path %}
+            <div class="alert alert-success">
+                ✅ {% trans "Slip uploaded successfully! The event organizer is reviewing your transaction." %}
+            </div>
+            <p>
+                <a href="{{ payment.info_data.slip_path }}" target="_blank" class="btn btn-default btn-sm">
+                    <span class="fa fa-eye"></span> {% trans "View uploaded slip" %}
+                </a>
+            </p>
+        {% else %}
+            <!-- Standard Django form container targetting the active route context -->
+            <form action="{% eventurl request.event "plugins:pretix_promptpay:slip_upload" order=order.code secret=order.secret %}" method="post" enctype="multipart/form-data" class="form">                {% csrf_token %}
+                <!-- Critical input parameter mapping back to provider perform condition -->
+                <input type="hidden" name="payment_action" value="promptpay_upload">
+                
+                {% bootstrap_form form %}
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span class="fa fa-upload"></span> {% trans "Submit Transfer Slip" %}
+                </button>
+            </form>
+        {% endif %}
+    </div>
+</div>
