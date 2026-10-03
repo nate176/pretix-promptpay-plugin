@@ -46,8 +46,9 @@ coverage.xml
 *,cover
 .hypothesis/
 
-# Translations
+# Translations (keep compiled catalogs so git/pip installs work without a build hook)
 *.mo
+!pretix_promptpay/locale/**/*.mo
 
 # Django stuff:
 *.log

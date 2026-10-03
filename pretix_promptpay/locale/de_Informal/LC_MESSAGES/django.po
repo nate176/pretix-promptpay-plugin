@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-07 19:01+0100\n"
+"POT-Creation-Date: 2026-10-03 08:58+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Nate\n"
 "Language-Team: \n"
@@ -10,3 +10,211 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: pretix_promptpay/apps.py:17
+msgid "Prompt Pay"
+msgstr ""
+
+#: pretix_promptpay/apps.py:19
+msgid "Thai Prompytpay QR Payments"
+msgstr ""
+
+#: pretix_promptpay/logentrytypes.py:10
+#, python-brace-format
+msgid ""
+"PromptPay bank transfer slip uploaded. <a href='{url}' target='_blank'>View "
+"File</a>"
+msgstr ""
+
+#: pretix_promptpay/logentrytypes.py:18
+msgid "Organizer staff"
+msgstr ""
+
+#: pretix_promptpay/logentrytypes.py:19
+#, python-brace-format
+msgid "PromptPay transfer verified and payment approved by {user}."
+msgstr ""
+
+#: pretix_promptpay/payment.py:19
+msgid "Upload Payment Slip"
+msgstr ""
+
+#: pretix_promptpay/payment.py:20
+msgid ""
+"Please upload a screenshot or image of your successful PromptPay transfer "
+"receipt."
+msgstr ""
+
+#: pretix_promptpay/payment.py:29 pretix_promptpay/views.py:35
+msgid "Only JPG, JPEG, or PNG images are accepted."
+msgstr ""
+
+#: pretix_promptpay/payment.py:34
+msgid "PromptPay / QR Code"
+msgstr ""
+
+#: pretix_promptpay/payment.py:35
+msgid "PromptPay"
+msgstr ""
+
+#: pretix_promptpay/payment.py:45
+msgid "PromptPay ID / Account"
+msgstr ""
+
+#: pretix_promptpay/payment.py:47
+msgid ""
+"Enter your 10-digit mobile number (e.g., 0812345678) or your 13-digit "
+"Corporate/Tax ID linked to your PromptPay account."
+msgstr ""
+
+#: pretix_promptpay/payment.py:55
+msgid "Payment instructions"
+msgstr ""
+
+#: pretix_promptpay/payment.py:56
+msgid "Displayed to the customer during checkout."
+msgstr ""
+
+#: pretix_promptpay/signals.py:27
+msgid "PromptPay Slips"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:5
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:8
+msgid "Bulk PromptPay Review"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:9
+msgid ""
+"Review all pending manual bank transfers. Compare the slip screenshots to "
+"your bank statement before approving."
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:14
+msgid "All caught up!"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:15
+msgid "There are no pending PromptPay slips awaiting review right now."
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:24
+msgid "Reject Selected Slips"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:27
+msgid "Approve & Confirm Selected Orders"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:36
+msgid "Order Code"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:37
+msgid "Total Amount"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:38
+msgid "Date Created"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:39
+msgid "Uploaded Transfer Slip Receipt"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:60
+msgid "Open Full Screen"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/bulk_review.html:62
+msgid "No file found"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/checkout_confirm.html:3
+msgid ""
+"You will be presented with a dynamic PromptPay QR code to complete your "
+"payment on the next screen."
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:2
+msgid "PromptPay Verification"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:11
+msgid "Open full-size slip image"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:20
+msgid "Approve Slip & Mark as Paid"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:25
+msgid "This slip has been approved and order is confirmed."
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/control.html:29
+msgid "No payment slip has been uploaded by the customer yet."
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:9
+msgid "Scan to Pay via PromptPay"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:19
+msgid "Upload your Transfer Slip"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:21
+msgid ""
+"Please open your banking application, complete the payment by scanning the "
+"QR code, and upload the transfer receipt below to secure your registration."
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:26
+msgid ""
+"Slip uploaded successfully! The event organizer is reviewing your "
+"transaction."
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:30
+msgid "View uploaded slip"
+msgstr ""
+
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:42
+msgid "Submit Transfer Slip"
+msgstr ""
+
+#: pretix_promptpay/views.py:24
+msgid "No active pending PromptPay transaction found for this order."
+msgstr ""
+
+#: pretix_promptpay/views.py:28
+msgid "No file was uploaded."
+msgstr ""
+
+#: pretix_promptpay/views.py:61
+msgid "Your bank transfer slip was uploaded successfully!"
+msgstr ""
+
+#: pretix_promptpay/views.py:80
+msgid "You do not have permission to view this page."
+msgstr ""
+
+#: pretix_promptpay/views.py:100
+msgid "No payments were selected."
+msgstr ""
+
+#: pretix_promptpay/views.py:123
+#, python-brace-format
+msgid "Error confirming order {code}: {error}"
+msgstr ""
+
+#: pretix_promptpay/views.py:126
+#, python-brace-format
+msgid "Successfully approved and confirmed {count} order(s)."
+msgstr ""
+
+#: pretix_promptpay/views.py:140
+#, python-brace-format
+msgid "Rejected {count} slip(s). Customers can now upload a new receipt."
+msgstr ""

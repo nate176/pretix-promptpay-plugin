@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-19 01:40+0000\n"
+"POT-Creation-Date: 2026-10-03 08:58+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,36 +41,44 @@ msgstr ""
 msgid "PromptPay transfer verified and payment approved by {user}."
 msgstr ""
 
-#: pretix_promptpay/payment.py:16
+#: pretix_promptpay/payment.py:19
 msgid "Upload Payment Slip"
 msgstr ""
 
-#: pretix_promptpay/payment.py:17
+#: pretix_promptpay/payment.py:20
 msgid ""
 "Please upload a screenshot or image of your successful PromptPay transfer "
 "receipt."
 msgstr ""
 
-#: pretix_promptpay/payment.py:26 pretix_promptpay/views.py:35
+#: pretix_promptpay/payment.py:29 pretix_promptpay/views.py:35
 msgid "Only JPG, JPEG, or PNG images are accepted."
 msgstr ""
 
-#: pretix_promptpay/payment.py:31
+#: pretix_promptpay/payment.py:34
 msgid "PromptPay / QR Code"
 msgstr ""
 
-#: pretix_promptpay/payment.py:32
+#: pretix_promptpay/payment.py:35
 msgid "PromptPay"
 msgstr ""
 
-#: pretix_promptpay/payment.py:42
+#: pretix_promptpay/payment.py:45
 msgid "PromptPay ID / Account"
 msgstr ""
 
-#: pretix_promptpay/payment.py:44
+#: pretix_promptpay/payment.py:47
 msgid ""
 "Enter your 10-digit mobile number (e.g., 0812345678) or your 13-digit "
 "Corporate/Tax ID linked to your PromptPay account."
+msgstr ""
+
+#: pretix_promptpay/payment.py:55
+msgid "Payment instructions"
+msgstr ""
+
+#: pretix_promptpay/payment.py:56
+msgid "Displayed to the customer during checkout."
 msgstr ""
 
 #: pretix_promptpay/signals.py:27
@@ -154,31 +162,31 @@ msgstr ""
 msgid "No payment slip has been uploaded by the customer yet."
 msgstr ""
 
-#: pretix_promptpay/templates/pretix_promptpay/pending.html:8
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:9
 msgid "Scan to Pay via PromptPay"
 msgstr ""
 
-#: pretix_promptpay/templates/pretix_promptpay/pending.html:14
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:19
 msgid "Upload your Transfer Slip"
 msgstr ""
 
-#: pretix_promptpay/templates/pretix_promptpay/pending.html:16
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:21
 msgid ""
 "Please open your banking application, complete the payment by scanning the "
 "QR code, and upload the transfer receipt below to secure your registration."
 msgstr ""
 
-#: pretix_promptpay/templates/pretix_promptpay/pending.html:21
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:26
 msgid ""
 "Slip uploaded successfully! The event organizer is reviewing your "
 "transaction."
 msgstr ""
 
-#: pretix_promptpay/templates/pretix_promptpay/pending.html:25
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:30
 msgid "View uploaded slip"
 msgstr ""
 
-#: pretix_promptpay/templates/pretix_promptpay/pending.html:37
+#: pretix_promptpay/templates/pretix_promptpay/pending.html:42
 msgid "Submit Transfer Slip"
 msgstr ""
 
