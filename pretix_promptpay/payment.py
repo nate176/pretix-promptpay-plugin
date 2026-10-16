@@ -2,6 +2,7 @@ import io
 import json
 import base64
 import os
+import crcmod
 import qrcode
 from django import forms
 from django.utils.translation import gettext_lazy as _
@@ -68,10 +69,39 @@ class PromptPayProvider(BasePaymentProvider):
         # Accepts standard 10-digit mobile (e.g., 0812345678) or 13-digit Tax ID
         account_id = self.settings.get('promptpay_id').strip().replace("-", "")
         amount = float(payment.amount) 
+        event_slug = request.event.slug
+        ref1 = f"PRETIX{event_slug}"
+        ref2 = payment.order.code
+
+        # def generate_payload(biller_id, amount,ref1,ref2="0"):
+        formatted_amount = f"{amount:.2f}"
+        tag30_value = (
+            "0016A000000677010112"
+            f"0115{account_id}09"
+            f"02{len(ref1):02d}{ref1}"
+            f"03{len(ref2):02d}{ref2}"
+        )
+
+        payload = (
+            "000201"
+            "010211"
+            f"30{len(tag30_value):02d}{tag30_value}"
+            "5303764"
+            f"54{len(formatted_amount):02d}{formatted_amount}"
+            "5802TH"
+        )
+
+        payload += "6304"
+        crc16 = crcmod.predefined.Crc('crc-ccitt-false')
+        crc16.update(payload.encode('utf-8'))
+        checksum = f"{crc16.crcValue:04X}"
+
+        payload += checksum
+
 
         # 2. Build the strict EMVCo compliant PromptPay string
         # Result looks like: "00020101021229370016A000000677010111..."
-        payload = promptpay_qr.generate_payload(account_id, amount)
+        # payload = promptpay_qr.generate_payload(account_id, amount)
 
         # 3. Render the raw string payload into a QR matrix image
         qr = qrcode.QRCode(version=1, box_size=10, border=4)

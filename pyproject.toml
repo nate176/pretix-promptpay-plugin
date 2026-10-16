@@ -28,6 +28,10 @@ build = "pretix_plugin_build.build:CustomBuild"
 requires = [
     "setuptools",
     "pretix-plugin-build",
+    'pyzbar',
+    'pillow',
+    'crcmod',
+    'promptparse-py@git+https://github.com/mrwan200/promptparse-py',
 ]
 
 [project.urls]
